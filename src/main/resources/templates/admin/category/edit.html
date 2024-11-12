@@ -3,14 +3,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="admin/fragments/head :: head"></head>
 <body class="hold-transition skin-blue sidebar-mini">
-	
 	<div class="wrapper">
+
 		<header th:replace="admin/fragments/header :: header"></header>
-		
+
 		<aside th:replace="admin/fragments/aside :: aside"></aside>
-		
+
 		<div class="content-wrapper">
-			
 			<section class="content-header">
 				<h1>Quản lý trang thêm sản phẩm</h1>
 				<ol class="breadcrumb">
@@ -19,17 +18,19 @@
 					<li class="active">Blank page</li>
 				</ol>
 			</section>
-			
+
 			<section class="content">
-				
+
 				<div class="col-md-8">
-					
 					<div class="box box-primary">
 						<div class="box-header with-border">
 							<h3 class="box-title">Create Category</h3>
 						</div>
 
-						<form role="form" method="post" th:action="@{/admin/add-category}" th:object="${category}">
+						<form role="form" method="post" th:action="@{/admin/edit-category}" th:object="${category}">
+						
+						<input type="hidden" class="form-control" id="exampleInputEmail1" value="Category Name" th:field="*{id}">
+						
 							<div class="box-body">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Category Name</label> 
@@ -38,15 +39,15 @@
 								<div class="form-group">
 									<label for="exampleInputEmail1">Chọn trạng thái</label>
 									<div class="radio">
-										<label> <input type="radio" name="" id="input" th:field="*{categoryStatus}" value="1" checked="checked">Active</label> 
+										<label> <input type="radio" name="" id="input" th:field="*{categoryStatus}" value="1">Active</label> 
 										<label> <input type="radio" name="" id="input" th:field="*{categoryStatus}" value="0">Hidden</label>
 									</div>
 								</div>
 
 							</div>
-							
+
 							<div class="box-footer">
-								<button type="submit" class="btn btn-primary">Create</button>
+								<button type="submit" class="btn btn-primary">Update</button>
 							</div>
 						</form>
 					</div>

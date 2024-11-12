@@ -62,38 +62,40 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Spring Boot Data JPA -->
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-data-jpa</artifactId>
-			</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 
-			<!-- SQL Server JDBC Driver (nếu bạn sử dụng SQL Server) -->
-			<dependency>
-				<groupId>com.microsoft.sqlserver</groupId>
-				<artifactId>mssql-jdbc</artifactId>
-				<version>9.2.1.jre8</version>
-			</dependency>
-			<dependency>
-				<groupId>com.microsoft.sqlserver</groupId>
-				<artifactId>mssql-jdbc</artifactId>
-				<version>10.2.1.jre11</version> <!-- kiểm tra để dùng phiên bản
-				phù hợp với dự án -->
-			</dependency>
-			<dependency>
-				<groupId>com.microsoft.sqlserver</groupId>
-				<artifactId>mssql-jdbc</artifactId>
-				<version>9.4.0.jre8</version>
-			</dependency>
+		<!-- SQL Server JDBC Driver (nếu bạn sử dụng SQL Server) -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
 	
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
 
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity6 -->
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
